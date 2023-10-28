@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl42j2l1pq686"]
+
+[ext_resource type="Texture2D" uid="uid://5q4leqktqvr5" path="res://Rectangle 3pong-player.png" id="1_tccx3"]
+[ext_resource type="Script" path="res://entities/Racket/racket-movement.gd" id="3_es8io"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f30l0"]
+
+[node name="Racket" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f30l0")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tccx3")
+
+[node name="PlayerInputComponent" type="Node" parent="."]
+script = ExtResource("3_es8io")
